@@ -1,54 +1,36 @@
-/*
-String Printing Problems
+/*Problem 5: Reverse a Number and Sum of Digits ➕
 ‌
-Problem 4: FizzBuzz Variation with Range 🚀
-‌
-Goal: Write a program that takes two integers as input: a starting number and an ending number. The program should iterate from the start number to the end number (inclusive) and print the following:
-Print "Code" if the number is divisible by 3.
-Print "Nerd" if the number is divisible by 5.
-Print "CodeNerd" if the number is divisible by both 3 and 5.
-Otherwise, print the number itself.
-Input Example: Start: 1, End: 15
-Expected Output (partial):
-1
-2
-Code
-4
-Nerd
-Code
-...
-14
-CodeNerd
+Goal: Write a program that takes a positive integer as input and performs two tasks:
+Prints the number in reverse order.
+Prints the sum of its digits.
+Input Example: 12345
+Expected Output:
+Reversed Number: 54321
+Sum of Digits: 15 (1 + 2 + 3 + 4 + 5)
 Key Concepts:
-Loops (for generating the sequence of numbers).
-Modulo Operator ($\%$ for checking divisibility).
-Nested Conditionals (The "CodeNerd" check must be first).
-4
+Loops (usually while loops).
+Modulo Operator ($\%$ for extracting the last digit).
+Integer Division (// or / for removing the last digit).
 */
 
-var numbers : Int = 20
+var positiveints : String = "121212"
 
-for number in 1...numbers {
+var reversednums = String(positiveints.reversed())
 
-    if number % 3 == 0 && number % 5 == 0 {
-    
-    	print("CodeNerd")
+print("The reversed positive integers is \(reversednums)")
 
-	}else if number % 3 == 0 {
-    
-    	print("Code")
-    
-    }else if number % 5 == 0 {
-    
-    	print("Nerd")
-    
-    }else {
-    
-    	print(number)
-    
-    }
+var total = 0
+
+for reversednum in reversednums{
+
+	if let digit = Int(String(reversednum)) {
+        
+          total += digit
+   
+     }
 
 }
+print("The sum of the positive digits is \(total)")
 
 
 
