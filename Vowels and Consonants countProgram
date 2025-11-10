@@ -1,0 +1,42 @@
+/*
+String Printing Problems
+Problem 1: Vowel and Consonant Count 🔢
+
+Goal: Write a program that takes a single sentence or word as input and prints the total count of vowels and the total count of consonants found in that input.
+Input Example: Programming is Fun
+Expected Output:
+Vowels: 5 (o, a, i, i, u)
+Consonants: 11 (P, r, g, r, m, m, n, g, s, F, n)
+Key Concepts:
+Iteration (Looping through a string).
+Conditional Logic (Checking if a character is a vowel).
+Case Sensitivity (Handling both 'a' and 'A', 'e' and 'E', etc.).
+Ignoring Non-Alphabetic Characters (Spaces, punctuation, etc.).
+1..
+*/
+
+// 1st - vowels string kulla char irukanu paru
+// 2nd - vowels a array kulla store panu.
+
+let vowels : String = "a,e,i,o,u,A,E,I,O,U"
+
+var words : String = "Programming"
+
+for char in words {
+
+//	print(char)
+ //   print(vowels)
+
+   if vowels.contains(char) {
+   
+   		print("Volwels in this words \(char)")
+   
+   }
+  else {
+   
+   		print("consonant in this words \(char)")
+   
+   }
+
+}
+
