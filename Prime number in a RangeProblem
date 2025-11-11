@@ -1,0 +1,43 @@
+/*
+String Printing Problems
+
+Problem 6: Prime Numbers in a Range 🌟
+
+Goal: Write a program that takes two integers, L (lower bound) and U (upper bound), and prints all prime numbers within that range (inclusive). A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+Input Example: L: 10, U: 30
+Expected Output: 11, 13, 17, 19, 23, 29
+Key Concepts:
+Nested Loops (Outer loop iterates through the range, inner loop checks for primality).
+Conditional Statements (to check divisibility and handle the number 1 and 2).
+Optimization (e.g., checking divisors only up to the square root of the number).
+
+*/
+var L : Int = 1
+var U :Int = 30
+
+for number in L...U {
+
+    if number <= 1 {
+    
+        continue
+        
+    }
+
+    var Primenum = true
+
+    for i in 2..<number {
+    
+        if number % i == 0 {
+        
+            Primenum = false
+            
+            break   
+        }
+    }
+
+      if Primenum == true{
+    
+          print(number, terminator:" ")
+        
+    }
+}
