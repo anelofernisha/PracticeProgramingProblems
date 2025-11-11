@@ -20,12 +20,23 @@ Result: The string is NOT a Palindrome.
 Key Concepts:
 String reversal (using loops or built-in functions/slicing).
 String comparison.
-/*
-var word : String = "level"
-let reversedword = String (word. reversed())
-if word == reversedword {
-print("The word \ (word) is a pallindrome.")
-} else {
+*/
+
+var word : String = "hello"
+
+let reversedword = String(word.reversed())
+
+  if word == reversedword {
+    
+	  print("Original String: \(word)")
+    print("Reversed String: \(reversedword)")
+	  print("Result: The string (\(word)) is a Palindrome.")
+        
+  }else {
+		
+    print("Original String: \(word)")
+    print("Reversed String: \(reversedword)")
+	  print("Result: The string (\(word)) is NOT a Palindrome.")
+
 }
-print("The word \(word) is not a pallindrome")
-}
+
