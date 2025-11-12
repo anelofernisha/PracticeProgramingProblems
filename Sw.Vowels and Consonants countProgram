@@ -20,11 +20,16 @@ Ignoring Non-Alphabetic Characters (Spaces, punctuation, etc.).
 
 let vowels : String = "a,e,i,o,u,A,E,I,O,U"
 
-var words : String = "Programming is fun"
+var words : String = "Programming is Fun"
 
 var vowelsChar = ""
 
 var consonantsChar = ""
+
+ if let i = words.firstIndex(of: " ") {
+   
+    words.remove(at: i)
+}
 
 for char in words {
 
@@ -43,8 +48,12 @@ for char in words {
    		//print("consonant \(char)")
    		consonantsChar.append(",")
    }
+   
+  
 
 }
+vowelsChar.removeLast()
+consonantsChar.removeLast()
 
 print(vowelsChar.count,"(\(vowelsChar))")
 print(consonantsChar.count,"(\(consonantsChar))")
