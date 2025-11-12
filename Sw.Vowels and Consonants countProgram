@@ -25,17 +25,22 @@ var words : String = "Programming is Fun"
 var vowelsChar = ""
 
 var consonantsChar = ""
-
+/*
  if let i = words.firstIndex(of: " ") {
    
     words.remove(at: i)
 }
+*/
 
 for char in words {
 
 //	print(char)
  //   print(vowels)
- let count = 0
+ //let count = 0
+ 
+ if char == " " {
+ continue
+ }
 
    if vowels.contains(char) {
    
