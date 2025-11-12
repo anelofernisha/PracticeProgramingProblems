@@ -17,20 +17,23 @@ var positiveints : String = "121212"
 
 var reversednums = String(positiveints.reversed())
 
-print("The reversed positive integers is \(reversednums)")
-
 var total = 0
+
+var numbers = ""
 
 for reversednum in reversednums{
 
 	if let digit = Int(String(reversednum)) {
-        
-          total += digit
-   
-     }
+    		
+          total += digit 
+          numbers += String(digit) + " +" 
+          
+}
 
 }
-print("The sum of the positive digits is \(total)")
+numbers.removeLast()
+
+print("Sum of Digits: \(total) (\(numbers))")
 
 
 
