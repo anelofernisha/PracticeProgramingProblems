@@ -1,1 +1,26 @@
+var word = "Programming"
+
+var string = word.lowercased() 
+
+var lettersSeen: [Character] = []
+
+var counts: [Int] = []    
+
+for letter in string {
+
+    if let index = lettersSeen.firstIndex(of: letter) {
+        
+        counts[index] += 1
+        
+    } else {
+       
+        lettersSeen.append(letter)
+        counts.append(1)
+    }
+}
+
+
+for i in 0..<lettersSeen.count {
+    print("\(lettersSeen[i]): \(counts[i])")
+}
 
